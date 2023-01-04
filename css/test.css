@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@700&display=swap');
+
+
+body{
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Noto Sans TC', sans-serif;
+    background-color: #363d48;
+}
+.container{
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.col-sm-12{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.input-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#input-bar{
+    width: 60vw;
+    background-color: transparent;
+    outline: none;
+    font-size: 18px;
+    height: 50px;
+    border-style: none;
+    border-bottom: 1px solid rgba(255,255,255,.5);
+    color: #ffffff;
+    letter-spacing: 2px;
+    padding: 10px;
+}
+#output-bar{
+    width: 60vw;
+    background-color: transparent;
+    outline: none;
+    font-size: 18px;
+    height: 50px;
+    border-style: none;
+    border-bottom: 1px solid rgba(255,255,255,.5);
+    color: #ffffff;
+    letter-spacing: 2px;
+    padding: 10px;
+}
+
+.btn-input{
+    height: 50px;
+    width: 50px;
+    right: 0px;
+    color: #e9edff;
+    background-color: transparent;
+    pointer-events: painted;
+    border-style: none;
+
+}
+.btn-output{
+    height: 50px;
+    width: 50px;
+    right: 0px;
+    color: #e9edff;
+    background-color: transparent;
+    pointer-events: painted;
+    border-style: none;
+}
+
+footer{
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+p{
+    color:white;
+}
