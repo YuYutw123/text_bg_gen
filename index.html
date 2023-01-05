@@ -69,12 +69,54 @@
                     </p>
                     <p class="bg-option">
                         <label for="bg-color">文字間距</label>
-                        <input type="number" id="text-color" name="text-color"
+                        <input type="number" id="text-pos" name="text-color"
                             value="#ffffff" class="form-control" style="max-width:100px;">
                     </p>
+                    <div class="size">
+                        <p class="bg-option">
+                            <label for="bg-color">文字大小</label>
+                        </p>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label for="bg-color">最大</label>
+                                    <input type="number" id="text-color" name="text-color" class="form-control" style="max-width:100px;">
+                                    
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="bg-color">最小</label>
+                                    <input type="number" id="text-color" name="text-color" class="form-control" style="max-width:100px;">
+                                    
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <p class="bg-option">
+                        <label for="bg-color">文字間距</label>
+                        <select id="select_item" onchange="select()">
+                                        <option value="none">請選擇</option>
+                                        <option value="Noto">Noto Sans TC</option>
+                        </select>
+                    </p>
+                    <p class="bg-option">
+                        <label for="bg-color">圖片圓角</label>
+                        <input type="checkbox" id="rad" name="rad" value="rad" class="check-box">
+                    </p>
+                    <div class="text-content">
+                        <p class="bg-option">
+                            <label for="bg-color">內容文字</label>
+                        </p>
+                        <div class="container">
+                            <textarea id="text-content" class="col-12" name="text-content" rows="6" cols="40" required>在這邊輸入你要的文字</textarea>
+
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-8">
-                    
+                    <div class="preview">
+
+                    </div>
                 </div>
             </div>
         </div>

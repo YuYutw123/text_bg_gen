@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400&display=swap');
 
 * {
     box-sizing: border-box;
@@ -11,6 +11,10 @@
     color: #ffffff;
     padding: 1rem;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.offcanvas.offcanvas-end {
+    width: 300px;
 }
 
 .nav-item{
@@ -29,7 +33,6 @@
 }
 
 body{
-    font-family: 'Noto Sans TC', sans-serif;
     background-color: #343a45;
 }
 
@@ -42,7 +45,34 @@ body{
     justify-content: space-between;
 }
 
-input {
+input, textarea {
     color: #000000;
 }
   
+.size, .text-content{
+    font-family: 'Noto Sans TC', sans-serif;
+    background-color: #6f7c92;
+    border-radius: 0.5rem;
+    padding-bottom:1rem;
+    margin-bottom: 1rem;
+}
+
+#text-content {
+    font-family: 'Noto Sans TC', sans-serif;
+    border-radius: 0.5rem;
+}
+
+#select_item, option{
+    color:#000000;
+}
+
+.check-box {
+    width:20px;height:20px
+}
+
+.preview {
+    height: 50vh;
+    width: 50vw;
+    background-color: #b4b4b4;
+
+}
