@@ -24,7 +24,7 @@
 
 .content {
     font-size: 18px;
-    padding: 8vh;
+    padding: 4vw;
 }
 
 .bg-option{
@@ -74,5 +74,10 @@ input, textarea {
     height: 50vh;
     width: 50vw;
     background-color: #b4b4b4;
-
+}
+.footer p{
+    background-color: #3f4b60;
+    margin:0;
+    padding-top:0.5rem;
+    padding-bottom:1rem;
 }
