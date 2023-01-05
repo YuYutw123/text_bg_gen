@@ -49,7 +49,7 @@ input, textarea {
     color: #000000;
 }
   
-.size, .text-content{
+.size, .text-content, .preview-box{
     font-family: 'Noto Sans TC', sans-serif;
     background-color: #6f7c92;
     border-radius: 0.5rem;
