@@ -2,6 +2,8 @@
 
 ## todo list
 
+https://yuyutw123.github.io/text_bg_gen/
+
 - [ ] 背景顏色
 - [ ] 文字顏色
 - [ ] 文字密度
