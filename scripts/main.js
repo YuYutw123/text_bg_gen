@@ -3,15 +3,17 @@ let submitBtn = document.querySelector(".btn-input");
 const token = null;
 
 async function image_generation(value) {
-  const json = {
-    html: "<div class='test'>Hello, world!</div>",
-    css: ".test { background-color: green; }",
-  };
+  const msg = document.querySelector(".preview").outerHTML.toString();
+  console.log(msg);
+  let msg2 = msg.replaceAll("\n", "");
+  const json = JSON.stringify({
+    html: `${msg2}`,
+  });
   const username = "3d38785e-ca60-4a2c-b820-8a21519825eb";
   const password = "1ff63c65-17de-4c8b-87a3-363bdf4fdfb5";
   const options = {
     method: "POST",
-    body: JSON.stringify(json),
+    body: json,
     headers: {
       "Content-Type": "application/json",
       Authorization: "Basic " + btoa(username + ":" + password),
@@ -26,12 +28,13 @@ async function image_generation(value) {
       }
     })
     .then((data) => {
-      let result = (document.getElementById("output-bar").value = data.url);
+      console.log(data.url);
     })
     .catch((err) => {
       console.log("Error during fetch: " + error.message);
     });
 }
+
 function copyInput() {
   var copyText = document.getElementById("output-bar");
   copyText.select();
@@ -43,10 +46,12 @@ function copyInput() {
 let bgColor;
 let textColor;
 let textContent;
-const defaultColor = "#958888";
+const defaultColor = "#000000";
+const defaultColor2 = "#ffffff";
 
 window.addEventListener("load", startup, false);
 const preview = document.querySelectorAll(".preview");
+const preview2 = document.querySelectorAll(".input-content");
 
 function startup() {
   bgColor = document.querySelector("#bg-color");
@@ -56,7 +61,7 @@ function startup() {
   bgColor.select();
 
   textColor = document.querySelector("#text-color");
-  textColor.value = defaultColor;
+  textColor.value = defaultColor2;
   textColor.addEventListener("input", change_text_color, false);
   textColor.addEventListener("change", change_text_color, false);
   textColor.select();
@@ -74,14 +79,13 @@ function change_bg_color(event) {
 }
 
 function change_text_color(event) {
-  preview.forEach((el) => {
+  preview2.forEach((el) => {
     el.style.color = event.target.value;
   });
 }
 
 function text_content() {
   let element = document.querySelector("textarea");
-  console.log(element.value);
   const content = document.querySelector(".input-content");
   content.innerHTML = element.value;
 }

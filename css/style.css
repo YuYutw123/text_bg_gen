@@ -70,11 +70,7 @@ input, textarea {
     width:20px;height:20px
 }
 
-.preview {
-    height: 50vh;
-    width: 50vw;
-    background-color: #958888;
-}
+
 .footer p{
     background-color: #3f4b60;
     margin:0;
@@ -87,5 +83,4 @@ input, textarea {
     word-wrap: break-word;
     white-space:  normal ;
     word-break: break-all;
-    
 }
