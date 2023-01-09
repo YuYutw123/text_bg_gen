@@ -27,7 +27,7 @@
     padding: 4vw;
 }
 
-.bg-option{
+.bg-option, .text-option{
     display: flex;
     align-items: center;
 }
@@ -49,7 +49,7 @@ input, textarea {
     color: #000000;
 }
   
-.size, .text-content, .preview-box{
+.size, .text-content, .preview-box, .pic-size{
     font-family: 'Noto Sans TC', sans-serif;
     background-color: #6f7c92;
     border-radius: 0.5rem;
@@ -73,11 +73,19 @@ input, textarea {
 .preview {
     height: 50vh;
     width: 50vw;
-    background-color: #b4b4b4;
+    background-color: #958888;
 }
 .footer p{
     background-color: #3f4b60;
     margin:0;
     padding-top:0.5rem;
     padding-bottom:1rem;
+    
+}
+
+.input-content {
+    word-wrap: break-word;
+    white-space:  normal ;
+    word-break: break-all;
+    
 }

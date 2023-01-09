@@ -40,4 +40,48 @@ function copyInput() {
   alert("已複製" + copyText.value);
 }
 
-submitBtn.addEventListener("click", image_generation);
+let bgColor;
+let textColor;
+let textContent;
+const defaultColor = "#958888";
+
+window.addEventListener("load", startup, false);
+const preview = document.querySelectorAll(".preview");
+
+function startup() {
+  bgColor = document.querySelector("#bg-color");
+  bgColor.value = defaultColor;
+  bgColor.addEventListener("input", change_bg_color, false);
+  bgColor.addEventListener("change", change_bg_color, false);
+  bgColor.select();
+
+  textColor = document.querySelector("#text-color");
+  textColor.value = defaultColor;
+  textColor.addEventListener("input", change_text_color, false);
+  textColor.addEventListener("change", change_text_color, false);
+  textColor.select();
+
+  textContent = document.querySelector("#text-content");
+  textContent.addEventListener("input", text_content, false);
+  textContent.addEventListener("change", text_content, false);
+  textContent.select();
+}
+
+function change_bg_color(event) {
+  preview.forEach((el) => {
+    el.style.backgroundColor = event.target.value;
+  });
+}
+
+function change_text_color(event) {
+  preview.forEach((el) => {
+    el.style.color = event.target.value;
+  });
+}
+
+function text_content() {
+  let element = document.querySelector("textarea");
+  console.log(element.value);
+  const content = document.querySelector(".input-content");
+  content.innerHTML = element.value;
+}
